@@ -3,6 +3,7 @@ package basic.begin;
 public class Identifier {
 
     public static void main(String[] args) {
+
         //1. 식별자의 이름은 중복을 허용하지 않습니다.
         //그리고, 대/소문자를 철저하게 구분합니다.
 

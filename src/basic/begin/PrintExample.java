@@ -6,15 +6,15 @@ public class PrintExample {
 
         // 자바의 표준 출력 방식은 크게 3가지 입니다.
         // 1. 개행을 포함하지 않는 print()
-        // 2. 개행을 자동으로 포함하는 println(
+        // 2. 개행을 자동으로 포함하는 println()
 
         System.out.print("안녕하세요~");
         System.out.println("Hello");
         System.out.print("안녕히 가세요ㅜ");
         System.out.println("bye bye");
 
-        // 3.형식 지정 표준 출력 함수 printf()
-        // 서시문자를 이용해서 문자열을 완성시킨 후
+        // 3. 형식 지정 표준 출력 함수 printf()
+        // 서식 문자를 이용해서 문자열을 완성시킨 후
         // 서식 문자에 들어갈 값을 지정해서 출력하는 방식
 
         /*
@@ -30,12 +30,12 @@ public class PrintExample {
          \t: 가로 공백 (스페이스 4칸)
          */
 
-        int month =12;
+        int month = 12;
         int day = 25;
         String anni = "크리스마스";
 
         // 12월 25일은 크리스마스 입니다.
-        System.out.println(month + "월" + day + "일은" + anni + "입니다.");
+        System.out.println(month + "월 " + day + "일은" + anni + "입니다.");
         System.out.printf("%d월 %d일은 %s 입니다.\n", month, day, anni);
 
         // 실수를 표현하는 서식 문자 %f -> 기본6자리까지 표현
