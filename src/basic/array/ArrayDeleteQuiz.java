@@ -23,12 +23,12 @@ public class ArrayDeleteQuiz {
         while (true) {
 
             if(kakao.length == 0) {
-                System.out.println("더이상 삭제할 치구가 없네요.");
+                System.out.println("더 이상 삭제할 친구가 없네요.");
                 System.out.println("프로그램 종료.");
                 break;
             }
 
-            System.out.println("삭제할 친구 이름을 입력하시오.");
+            System.out.println("- 삭제할 친구 이름을 입력하시오.");
             System.out.print(">> ");
             String targetName = sc.next();
 
@@ -58,10 +58,10 @@ public class ArrayDeleteQuiz {
                 }
 
                 kakao = temp; temp = null;
-                System.out.println("삭제 후: " + Arrays.toString(kakao));
+                System.out.println("- 삭제 후 정보: " + Arrays.toString(kakao));
 
             } else {
-                System.out.printf("%d 는(은)존재하지 않는 이름입니다.\n", targetName);
+                System.out.printf("해당 이름(%s) 은(는)존재하지 않습니다.\n", targetName);
             }
 
         }
