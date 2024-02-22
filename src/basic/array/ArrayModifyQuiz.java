@@ -18,39 +18,40 @@ public class ArrayModifyQuiz {
         // 6. 찾은 인덱스를 통해 새로운 이름으로 수정한다.
         // 7. 위 내용을 수정이 정확히 완료될때까지 반복한다.
 
-        System.out.println("수정할 타겟의 이름을 입력하시오.");
-        String name = sc.next();
 
-      boolean flag = false;
-        for (int i = 0; i < kakao.length; i++) {
-            if(name.equals(kakao[i])) {
-                System.out.println("탐색완료 "+ i);
-                flag = true;
-                break;
+        while (true){
+            System.out.println("수정할 캐릭터의 이름을 입력하시오.");
+            System.out.println(">> ");
+            String targetName = sc.next();
+
+            // 인덱스 탐색
+            int index = -1;
+            for (int i = 0; i < kakao.length; i++) {
+                if(targetName.equals(kakao[i])) {
+                    index = i;
+                    break;
+                }
             }
-        }
 
-        if(!flag){
-            System.out.println(name + "은(는) 없습니다.");
-        }
+            // 수정 여부 판단
+            if(index != -1) {
+                System.out.printf("%s의 이름을 변경합니다.\n", targetName);
+                System.out.println(">> ");
+                String newName = sc.next();
+                kakao[index] = newName;
+                System.out.println("변경완료");
+                System.out.println("변경 완료 후 정보는 이렇습니다." + Arrays.toString(kakao));
+                break;
 
+            } else {
+                System.out.printf("%s 은(는) 없는 이름입니다.\n", targetName);
+            }
 
+        } // end while
 
+        sc.close();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+    } // end main
 
 
 }
