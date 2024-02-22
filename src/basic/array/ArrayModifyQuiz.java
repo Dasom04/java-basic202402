@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class ArrayModifyQuiz {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        String[] kakao = {"라이언", "네오", "어피치", "라이언", "춘식이"};
+        String[] kakao = {"무지", "네오", "어피치", "라이언", "춘식이"};
         System.out.println("현재 저장된 친구들: " + Arrays.toString(kakao));
 
         // 1. 수정 타겟의 이름을 입력받는다.
@@ -20,7 +21,7 @@ public class ArrayModifyQuiz {
 
 
         while (true){
-            System.out.println("수정할 캐릭터의 이름을 입력하시오.");
+            System.out.println("- 수정할 캐릭터의 이름을 입력하시오.");
             System.out.println(">> ");
             String targetName = sc.next();
 
@@ -36,11 +37,11 @@ public class ArrayModifyQuiz {
             // 수정 여부 판단
             if(index != -1) {
                 System.out.printf("%s의 이름을 변경합니다.\n", targetName);
-                System.out.println(">> ");
+                System.out.print(">> ");
                 String newName = sc.next();
                 kakao[index] = newName;
                 System.out.println("변경완료");
-                System.out.println("변경 완료 후 정보는 이렇습니다." + Arrays.toString(kakao));
+                System.out.println("변경 후 정보: " + Arrays.toString(kakao));
                 break;
 
             } else {
