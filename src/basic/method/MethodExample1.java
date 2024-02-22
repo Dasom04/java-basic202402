@@ -28,7 +28,7 @@ public class MethodExample1 {
     // 메서드의 선언! (static은 뒤에서 알려주릴게요, 지금은 없다고 생각하세요.)
     static int calcTotal(int end) {
         int total = 0;
-        for (int i = 1; i <=end ; i++) {
+        for (int i = 1; i <= end; i++) {
             total += i;
         }
         return total;
@@ -37,10 +37,16 @@ public class MethodExample1 {
 
     public static void main(String[] args) {
 
+        int result = calcTotal(10);
+        System.out.println("result" + result);
 
-        //int result = calcTotal(end:10);
-       // System.out.println(result);
-
-        //System.out.println("1~100까지의 누적합: " + calcTotal(end:100));
+        System.out.println("1~100까지의 누적합: " + calcTotal(100));
+        System.out.println("1~200까지의 누적합: " + calcTotal(200));
+        System.out.println("1~300까지의 누적합: " + calcTotal(300));
+        System.out.println("1~400까지의 누적합: " + calcTotal(400));
+        System.out.println("1~500까지의 누적합: " + calcTotal(500));
+        System.out.println("1~600까지의 누적합: " + calcTotal(600));
+        System.out.println("1~700까지의 누적합: " + calcTotal(700));
+        System.out.println("1~800까지의 누적합: " + calcTotal(800));
     }
 }
