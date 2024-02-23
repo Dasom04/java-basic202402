@@ -22,10 +22,9 @@ public class StringQuiz {
         System.out.println("-을 포함해서 입력하시오.");
 
 
-        String ssn;
         while (true) {
             System.out.print(">> ");
-            ssn = sc.next();
+            String ssn = sc.next();
 
             if (ssn.indexOf("-") == -1) {
                 System.out.println("-을 포함하여 입력하시오.");
@@ -45,29 +44,24 @@ public class StringQuiz {
 
             if (c == '1' || c == '2'){
                 year += 1900;
-            }else {
+            } else {
                 year += 2000;
             }
 
             int age = 2024 - year;
 
             String gender;
-            if(c == '1'|| c == '3'){
+            if(c == '1' || c == '3'){
                 gender = "남자";
             } else {
                 gender = "여자";
             }
 
-
             System.out.printf("%d년 %s월 %s일 %d세 %s\n", year, month, day, age, gender);
             break;
 
-
-
         }
         sc.close();
-
-
 
     }
 }
