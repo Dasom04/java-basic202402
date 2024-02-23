@@ -29,14 +29,14 @@ public class BreadMain {
         클래스 제작이 완료되면 main 메서드에 객체를 생성해서 결과를 출력해 보세요.
          */
 
-        Bread b = new Bread();
-        b.name = "피자빵";
-        b.price = 1000;
-        b.ingredient = "밀가루";
-
-        b.info();
-
-        Bread c = new Bread("초코케이크", 3000, "초콜릿");
+//        Bread b = new Bread();
+//        b.name = "피자빵";
+//        b.price = 1000;
+//        b.ingredient = "밀가루";
+//
+//        b.info();
+//
+//        Bread c = new Bread("초코케이크", 3000, "초콜릿");
 
 
 
