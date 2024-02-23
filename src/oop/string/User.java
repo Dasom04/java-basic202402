@@ -1,7 +1,9 @@
 package oop.string;
 
 public class User {
+
+     String id;
+     String pw;
+
 }
-   // String id;
-   // String pw;
 

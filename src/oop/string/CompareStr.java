@@ -22,21 +22,26 @@ public class CompareStr {
          문자열의 내용 값 그 자체를 비교할 때는 equals() 메서드를 사용해야
          합니다.
          */
-//        Scanner sc = new Scanner(System.in);
-//
-//        User kim = new User();
-//        kim.id = "abc123";
-//        kim.pw = "aaa111";
-//
-//        System.out.print("비밀번호 입력하시오.: ");
-//        String password = sc.next();
-//
-//        System.out.println("kim.pw = " + kim.pw);
-//        System.out.println("passWord = " + password);
-//
-//        System.out.println("--------------------");
-//
-//        System.out.println("== 연산자의 결과: " +(password == kim.pw));
-//        System.out.println("equals의 결과: " + (password.equals(kim.pw)));
+
+        String name ="김춘식";
+        String name2 = new String("김춘식");
+        System.out.println(name == name2);
+
+        Scanner sc = new Scanner(System.in);
+
+        User kim = new User();
+        kim.id = "abc123";
+        kim.pw = "aaa111";
+
+        System.out.print("비밀번호 입력하시오.: ");
+        String password = sc.next();
+
+        System.out.println("kim.pw = " + kim.pw);
+        System.out.println("passWord = " + password);
+
+        System.out.println("--------------------");
+
+        System.out.println("== 연산자의 결과: " +(password == kim.pw));
+        System.out.println("equals의 결과: " + (password.equals(kim.pw)));
     }
 }
