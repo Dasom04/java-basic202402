@@ -1,8 +1,5 @@
 package oop.inherit.good;
 
-import oop.inherit.bad.Hunter;
-import oop.inherit.bad.Mage;
-
 public class MainClass {
 
     public static void main(String[] args) {
@@ -18,7 +15,7 @@ public class MainClass {
 
         System.out.println("--------------------------");
 
-       /* Mage m1 = new Mage();
+        Mage m1 = new Mage();
         m1.name = "마법사1";
         m1.level = 1;
         m1.atk = 2;
@@ -29,15 +26,13 @@ public class MainClass {
 
         System.out.println("--------------------------");
 
-        Hunter h1 = new Hunter(){
-            h1.name = "사냥꾼1";
-            h1.level = 1;
-            h1.atk = 2;
-            h1.hp = 50;
-            h1.mana = 100;
-            h1.characterInfo();
-        }*/
-
+        Hunter h1 = new Hunter();
+        h1.name = "사냥꾼1";
+        h1.level = 1;
+        h1.atk = 4;
+        h1.hp = 50;
+        h1.pet = "멍멍이";
+        h1.characterInfo();
 
     }
 }
