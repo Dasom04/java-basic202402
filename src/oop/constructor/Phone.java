@@ -1,7 +1,5 @@
 package oop.constructor;
 
-import java.nio.channels.Pipe;
-
 public class Phone {
 
     String model;

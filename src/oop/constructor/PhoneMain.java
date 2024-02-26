@@ -1,7 +1,5 @@
 package oop.constructor;
 
-import com.sun.tools.javac.Main;
-
 public class PhoneMain {
     public static void main(String[] args) {
 
@@ -10,12 +8,13 @@ public class PhoneMain {
 
         System.out.println("-------------------------");
 
-        Phone galaxy = new Phone("galaxy");
+        Phone galaxy = new Phone("galaxy s24");
         galaxy.showSpec();
 
 
         System.out.println("--------------------------");
-        Phone iPhone = new Phone("아이폰 15", "스체이스 그레이");
+
+        Phone iPhone = new Phone("아이폰 15", "스페이스 그레이");
         iPhone.showSpec();
 
     }

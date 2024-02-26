@@ -1,10 +1,5 @@
 package oop.constructor;
 
-import basic.loop.BreakExample;
-
-import java.beans.BeanInfo;
-import java.nio.channels.Pipe;
-
 public class Bread {
 
     String name;
@@ -18,10 +13,10 @@ public class Bread {
     Bread() {}
 
 
-    Bread(String bName, int bPrice, String bIngredient) {
-       name = bName;
-       price = bPrice;
-       ingredient = bIngredient;
+    public Bread(String name, int price, String ingredient) {
+       this.name = name;
+       this.price = price;
+       this.ingredient = ingredient;
     }
 
     void  info() {
