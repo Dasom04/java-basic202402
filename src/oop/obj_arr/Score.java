@@ -13,4 +13,35 @@ public class Score {
      - 캡슐화를 구현해서 작성해 주세요. (생성자는 맘대로 하세요.)
     */
 
+
+    string name;
+    int korean;
+    int english;
+    int math;
+    int total;
+    double average;
+
+
+    public Score (){
+        this.name = name;
+        this.korean = korean;
+        this.english = english;
+        this.math = math;
+        this.total = total;
+        this.average = average;
+
+    }
+
+    public void scoreInfo () {
+        System.out.printf("이름: %s, 국어: %d, 영어:%d, 수학: %d\n"
+                , this.name, this.korean, this.english, this.math);
+    }
+
+
+
+
+
+
+
+
 }

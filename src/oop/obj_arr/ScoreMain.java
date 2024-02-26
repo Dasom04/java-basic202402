@@ -1,5 +1,7 @@
 package oop.obj_arr;
 
+import java.util.Scanner;
+
 public class ScoreMain {
     public static void main(String[] args) {
 
@@ -20,6 +22,25 @@ public class ScoreMain {
           모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
          */
 
+
+        Scanner sc = new Scanner(system.in);
+        System.out.println("귀하의 이름을 입력하시오.");
+        System.out.print("> ");
+        String name = sc.next();
+
+        System.out.println("국어 점수를 입력하시오.");
+        System.out.print("> ");
+        int kor = sc.nextInt();
+
+        System.out.println("영어 점수를 입력하시오.");
+        System.out.print("> ");
+        int eng = sc.nextInt();
+
+        System.out.println("수학 점수를 입력하시오.");
+        System.out.print("> ");
+        int math = sc.nextInt();
+
+        String[] Score = new String[100];
 
     }
 }
