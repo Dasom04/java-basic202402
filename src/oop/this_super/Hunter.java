@@ -3,6 +3,11 @@ package oop.this_super;
 public class Hunter extends player {
      String pet;
 
+     Hunter(String name) {
+         super(name);
+         this.pet = "멍멍이";
+     }
+
     @Override
     void characterInfo() {
         super.characterInfo();
