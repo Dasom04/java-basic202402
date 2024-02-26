@@ -1,8 +1,6 @@
 package oop.string;
 
-
 import java.util.Scanner;
-
 public class CompareStr {
     public static void main(String[] args) {
         /*
@@ -41,7 +39,7 @@ public class CompareStr {
 
         System.out.println("--------------------");
 
-        System.out.println("== 연산자의 결과: " +(password == kim.pw));
+        System.out.println("== 연산자의 결과: " + (password == kim.pw));
         System.out.println("equals의 결과: " + (password.equals(kim.pw)));
     }
 }
