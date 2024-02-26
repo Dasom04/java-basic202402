@@ -34,6 +34,8 @@ public class ArrayInsert {
             System.out.println("성별: ");
             String gender = sc.next();
 
+//            Person p = new Person(name, age, gender);
+//            people[i] = p;
             people[i] = new Person(name, age, gender);
 
             System.out.println("*** 정보 입력 완료 ***");
