@@ -23,7 +23,7 @@ public class C extends A {
         super.x = 1;
 //        super.y = 2; (x)
 
-      //  super.method1();
+        super.method1();
 //        super.method2(); (x)
 
     }

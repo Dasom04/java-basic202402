@@ -6,12 +6,10 @@ public class MyBirth {
     int month;
     int day;
 
-  //  Void birthInfo() {
- //       System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n", this.year, this.month, this.day);
- //   }
-
+    void birthInfo() {
+        System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
+                , this.year, this.month, this.day);
+    }
 
 }
-
-
 

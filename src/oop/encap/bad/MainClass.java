@@ -5,11 +5,11 @@ public class MainClass {
     public static void main(String[] args) {
 
         MyBirth my = new MyBirth();
-        my.year = 1992;
-        my.month = 10;
-        my.day = 13;
+        my.year = 200051;
+        my.month = 999;
+        my.day = -13512;
 
-      //  my.birthInfo();
+        my.birthInfo();
 
     }
 }

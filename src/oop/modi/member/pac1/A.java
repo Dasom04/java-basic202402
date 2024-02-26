@@ -8,7 +8,7 @@ public class A {
 
     public A() {
         x = 1;
-        y =  2;
+        y = 2;
         z = 3;
 
         method1();

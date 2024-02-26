@@ -85,16 +85,14 @@ public class MyBirth {
         if (day > 31 || day < 1) {
             System.out.println("잘못된 일 입니다.");
             return;
-        } else {  // day가 1~31일 까지 들어옴.
+        } else {  // day가 1 ~ 31일 까지 들어옴.
             if (this.month == 0) {
-                System.out.println("일자를 할당하기 위해서는 월 세팅이 선행되어야 한다.");
+                System.out.println("일자를 할당하기 위해서는 월 세팅이 선행되어야 합니다.");
                 return;
             }
 
-            boolean flag = true;
-            flag = isFlag(day, flag);
 
-            if (!flag) {
+            if (!isValidateMonth(day)) {
                 System.out.println("월에 따른 일자가 올바르지 않습니다.");
                 return;
             }
@@ -103,7 +101,7 @@ public class MyBirth {
     }
 
     // 메서드가 private이다? -> 해당 클래스 안에서만 호출한다. 외부에서는 아예 접근할 수 없다.
-    private boolean isFlag(int day) {
+    private boolean isValidateMonth(int day) {
         // 각 월에 적합한 일자가 세팅되는지를 판별하는 메서드
         switch (this.month) {
             case 2:
@@ -113,6 +111,7 @@ public class MyBirth {
             case 4: case 6: case 9: case 11:
                 if (day > 30)
                     return false;
+
             default:
                 return true;
         }
@@ -120,19 +119,19 @@ public class MyBirth {
 
 
     public int getDay (){
-                return day;
+        return day;
         }
 
         // 완성된 생일 정보를 출력해 주는 메서드
 
     public  void  birthInfo() {
-        // year . month, day 셋 중 단 하나라도 제개로 값이 세팅되지 않았다면
+        // year, month, day 셋 중 단 하나라도 제개로 값이 세팅되지 않았다면
         // 출력을 해 주지 않겠다.
         if(this.year == 0 || this.month == 0|| this.day == 0) {
             System.out.println("날짜 필드 중에 초기화 되지 않은 데이터가 있습니다.");
             return;
         }
-        System.out.printf("%d %d %d일 입니다.\n"
+        System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
                             , this.year, this. month, this.day);
     }
 

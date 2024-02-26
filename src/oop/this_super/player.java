@@ -42,7 +42,7 @@ public class player {
         // 출력 메세지: x 가 y를 공격합니다.
         System.out.printf("%s(이)가 %s(을)를 공격합니다.\n", this.name , target.name);
 
-        // 목표: 맞는 사람의 hp를 10 낮추고 , 나의 체력을 5 회복하고 싶다.
+        // 목표: 맞는 사람의 hp를 10 낮추고, 나의 체력을 5 회복하고 싶다.
         // 결과를 출력. (나의 체력:xx, 상대 체력:xx)
         target.hp -= 10;
         this.hp += 5;
@@ -51,14 +51,11 @@ public class player {
     }
 
     void  characterInfo() {
-        System.out.println("***캐릭터 정보 ****");
+        System.out.println("*** 캐릭터 정보 ***");
         System.out.println("# 아이디: " + name);
-        System.out.println("# 레벨: "+ level);
-        System.out.println("# 공격력: "+ atk);
-        System.out.println("# 체력: "+ hp);
+        System.out.println("# 레벨: " + level);
+        System.out.println("# 공격력: " + atk);
+        System.out.println("# 체력: " + hp);
     }
-
-
-
 
 }

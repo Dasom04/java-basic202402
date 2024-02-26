@@ -11,16 +11,15 @@ public class MainClass {
     System.out.println("-------------------");
 
     player p2 = new player("플레이어2");
-        System.out.println("main에서 p2의 주소값" +p2);
     p2.characterInfo();
 
     System.out.println("-------------------");
 
     player p3 = new player("플레이어3",100);
-    System.out.println("main에서 p2의 주소값" +p3);
     p3.characterInfo();
 
         System.out.println("--------------------");
+
         p1.attack(p2);
         p2.attack(p3);
         p3.attack(p1);
@@ -30,9 +29,5 @@ public class MainClass {
         Warrior w1 = new Warrior("전사짜짱맨");
         w1.characterInfo();
     }
-
-
-
-
 
 }
