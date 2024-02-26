@@ -1,7 +1,6 @@
 package oop.string;
 
 import java.util.Arrays;
-import java.util.Locale;
 
 public class StringMethod {
     public static void main(String[] args) {
@@ -39,7 +38,7 @@ public class StringMethod {
         String lower = str2.toLowerCase(); // 일괄 소문자 변경
         System.out.println("lower = " + lower);
 
-        String upper = str2.toUpperCase(Locale.ROOT); // 일괄 대문자 변경
+        String upper = str2.toUpperCase(); // 일괄 대문자 변경
         System.out.println("upper = " + upper);
 
         // trim(): 문자열의 앞, 뒤 공백을 제거.
