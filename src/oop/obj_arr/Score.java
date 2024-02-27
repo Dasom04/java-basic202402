@@ -14,29 +14,82 @@ public class Score {
     */
 
 
-    string name;
-    int korean;
-    int english;
-    int math;
-    int total;
-    double average;
+    private String name;
+    private int kor;
+    private int eng;
+    private int math;
+    private int total;
+    private double average;
 
+    public String getName() {
+        return name;
+    }
 
-    public Score (){
+    public void setName(String name) {
         this.name = name;
-        this.korean = korean;
-        this.english = english;
+    }
+
+    public int getKor() {
+        return kor;
+    }
+
+    public void setKor(int kor) {
+        this.kor = kor;
+    }
+
+    public int getEng() {
+        return eng;
+    }
+
+    public void setEng(int eng) {
+        this.eng = eng;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
         this.math = math;
-        this.total = total;
-        this.average = average;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+//    public void setTotal() {
+//        // 이미 kor, eng, math가 세팅이 완료되었다고 가정.
+//        this.total = this.kor + this.eng + this.math;
+//    }
+
+    public double getAverage() {
+        return average;
+    }
+
+//    public void setAverage() {
+//        this.average = this.total / 3.0;
+//    }
+
+    // 총점과 평균을 한번에 계산해서 세팅하는 메서드
+    public void setTotalAndAvg(){
+        this.total = this.kor + this.eng + this.math;
+        this.average = this.total / 3.0;
 
     }
 
     public void scoreInfo () {
-        System.out.printf("이름: %s, 국어: %d, 영어:%d, 수학: %d\n"
-                , this.name, this.korean, this.english, this.math);
+        System.out.printf("이름: %s, 국어: %d점, 영어:%d점, 수학: %d점\n총점: %d점 평균: %.2f점\n"
+                , name, kor, eng, math, total, average);
     }
 
+    // 점수 유효성 검즈
+    public boolean isvalidateScore(int score) {
+          if (score > 100 || score < 0) {
+              System.out.println("유효하지 않은 점수 입니다. (0 ~ 100)");
+              return false;
+          }
+          return true;
+    }
 
 
 
