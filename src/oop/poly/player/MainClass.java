@@ -41,8 +41,8 @@ public class MainClass {
         System.out.println("====================================");
 
         w1.rush(m1);
-        w1.rush(m2);
-        w1.rush(m3);
+        w1.rush(w2);
+        w1.rush(h1);
 
 
 
