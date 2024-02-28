@@ -60,11 +60,8 @@ public class ScoreMain {
                 continue;
             }
 
-            s.setName(name);
-            s.setKor(kor);
-            s.setEng(eng);
-            s.setMath(math);
-            s.setTotalAndAvg();
+            Score ss = new Score(name, kor, eng, math);
+
 
 //            int total = kor + eng + math;
 //            double avg = total / 3.0;
