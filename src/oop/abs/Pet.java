@@ -40,7 +40,7 @@ public  abstract class Pet {
     public abstract void eat ();
 
 
-    // 산책 기능(서택적 기능)
+    // 산책 기능(선택적 기능)
     // abstract를 붙이면 오버라이딩이 강제되기 ㄸ문에, 산책을 못하는 애완동물을 위해 abstract를 제거.
     public void walk () {};
 
