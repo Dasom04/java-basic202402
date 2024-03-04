@@ -27,10 +27,13 @@ public class User {
         this.age = age;
     }
 
-   // @Override
-   // public String toString() {
-  //      return "User{+ "
-  //  }
+    @Override
+    public String toString() {
+        return "User{" +
+                "이름='" + name + '\'' +
+                ", 나이=" + age +
+                '}';
+    }
 
   /*
          1. User 클래스를 은닉(캡슐화)된 변수 name, age로 선언해서 구현
