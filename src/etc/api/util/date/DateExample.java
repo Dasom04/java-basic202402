@@ -1,4 +1,4 @@
-package etc.api.util.util.date;
+package etc.api.util.date;
 
 import com.sun.jdi.Value;
 import util.Utility;
