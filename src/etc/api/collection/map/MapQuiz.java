@@ -5,6 +5,7 @@ import util.Utility;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.SimpleTimeZone;
 
 import static util.Utility.makeLine;
 
@@ -29,37 +30,40 @@ public class MapQuiz {
          */
 
         Scanner sc = new Scanner(System.in);
-
         Map<String, String> engKor = new HashMap<>();
 
         System.out.println("*** 영어 단어장 만들기 ***");
-        while (true) {
 
-            System.out.println("영단어를 입력하시오.");
+        while(true) {
+            System.out.print("영단어: ");
             String eng = sc.next();
 
-            if(eng.equals("그만")) {
+            if (eng.equals("그만")) {
                 System.out.println("입력을 종료합니다.");
                 break;
             } else if (engKor.containsKey(eng)) {
-                System.out.println("이미 등록한 단어 입니다.");
+                System.out.println("이미 등록한 단어입니다.");
                 continue;
             }
 
-            System.out.println("한글 뜻을 입력하시오.");
+            System.out.print("한글 뜻: ");
             String kor = sc.next();
-
             engKor.put(eng, kor);
             System.out.println("영단어 등록 완료!\n");
 
         }
+
         makeLine();
 
-        System.out.println("*** 오늘 등록한 단어 ***");
+        System.out.println("\n*** 오늘 등록한 단어 ***");
         for (String s : engKor.keySet()) {
             System.out.println(s + " : " + engKor.get(s));
         }
+
         sc.close();
+
+
+
 
     }
 }
