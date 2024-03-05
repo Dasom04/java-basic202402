@@ -12,11 +12,11 @@ public class HashMapExample {
          - Key / Value가 한 세트를 이루는 자료구조
          - Key값을 통해 Value를 참조하는 방식.
          - Key는 중복 저장을 허용하지 않는다.
-         */
+        */
         // Map은 key, Value 쌍을 이루기 때문에 멀티 제네릭을 설정.
         Map<String, String> map = new HashMap<>();
 
-        // Map에 데잍를 추가하는 메서드: put(key, value)
+        // Map에 데이터를 추가하는 메서드: put(key, value)
         map.put("멍멍이", "김철수");
         map.put("야옹이", "홍길동");
         map.put("짹짹이", "박영희");
