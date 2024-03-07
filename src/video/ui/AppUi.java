@@ -8,7 +8,7 @@ public class AppUi {
     private  static  Scanner sc = new Scanner(System.in);
 
     public static String inputString (String messege) {
-        System.out.println(messege);
+        System.out.print(messege);
         return sc.nextLine();
     }
 
@@ -17,9 +17,10 @@ public class AppUi {
         int num = 0;
         try{
             num = sc.nextInt();
-        }catch (InputMismatchException e){
+        }catch (InputMismatchException e) {
             System.out.println("# 올바른 정수 입력값이 아닙니다!");
-            sc.nextLine();
+        }finally {
+            sc.nextLine(); // try에서도(엔터 입력값), catch에서도 (쓰레기 문자열 추가) nextLine()이 동작해야 함.
         }
         return num;
     }
@@ -38,6 +39,15 @@ public class AppUi {
         makeLine();
     }
 
+    // 회원관리 시스템 화면 출력
+    public static void userManagementScreen () {
+        System.out.println("\n========= 회원 관리 시스템 =========");
+        System.out.println("### 1. 신규 회원 추가");
+        System.out.println("### 2. 회원 검색");
+        System.out.println("### 3. 회원 탈퇴");
+        System.out.println("### 4. 첫 화면으로 가기");
+        makeLine();
+    }
 
 
 
