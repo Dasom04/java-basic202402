@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Utility {
 
+    public static final String FILE_PATH = "C:/MyWorkSpace/music";
+
     static Scanner sc = new Scanner(System.in);
 
     // 입력창의 구분을 위해 줄을 그어주는 메서드
