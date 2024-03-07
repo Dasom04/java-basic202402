@@ -90,7 +90,7 @@ public class UserService implements AppService {
 
         if (users.size() > 0) {
             // 삭제 대상 회원 번호를 저장할 리스트 -> 탈퇴할 회원 번호를 입력할 때 삭제 대상 번호를 입력했는지 확인용.
-            List<Inter> userNums = new ArrayList<>();
+            List<Integer> userNums = new ArrayList<>();
 
             for (User user : users) {
                 System.out.println(user);

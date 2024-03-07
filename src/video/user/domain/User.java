@@ -24,7 +24,7 @@ public class User {
         User.sequence = sequence;
     }
 
-    public int getUserNumber() {
+    public Integer getUserNumber() {
         return userNumber;
     }
 
