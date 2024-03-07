@@ -36,4 +36,8 @@ public class UserRepository {
 
 
     }
+
+    public User findUserByNumber(int userNumber) {
+        return userDatabase.get(userNumber);
+    }
 }

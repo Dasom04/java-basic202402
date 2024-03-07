@@ -1,5 +1,10 @@
 package video.user.domain;
 
+import video.oder.domain.Order;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class User {
 
     private static int sequence; // 회원 누적 순차번호
@@ -8,12 +13,27 @@ public class User {
     private String userName;
     private  String phoneNumber;
     private Grade grade;
+    private int totalPaying; // 총 결제 금액
+
+    private Map<Integer, Order> oderList; // 각 회원마다 가지는 대여 목록
+
+
 
     public User(String userName, String phoneNumber, Grade grade) {
         this.userNumber = ++sequence; // 회원이 생성 될때 회원 고유 번호를 하나 올려서 대입.
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.grade = grade;
+        this.oderList = new HashMap<>();
+    }
+
+    public Map<Integer, Order> getOderList() {
+        return oderList;
+    }
+
+    // 대여 목록 추가 기능
+    public void addOrder(Order order) {
+        this.oderList.put(order.getMovie().getSerialNumber(), order);
     }
 
     public static int getSequence() {
@@ -57,6 +77,13 @@ public class User {
     }
 
 
+    public int getTotalPaying() {
+        return totalPaying;
+    }
+
+    public void setTotalPaying(int totalPaying) {
+        this.totalPaying += totalPaying;
+    }
 
     @Override
     public String toString() {

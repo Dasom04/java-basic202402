@@ -119,4 +119,44 @@ public class MovieRepository {
 
 
     }
+
+    public List<Movie> searchByRental(boolean possible) {
+        List<Movie> searchedList = new ArrayList<>();
+
+        if(possible) { // 대여가능한 Movie들만 거르기
+            for (int key : movieDatabase.keySet()) {
+                Movie movie = movieDatabase.get(key);
+                if(!movie.isRental()); {
+                    searchedList.add(movie);
+                }
+            }
+        } else { // 이미 대여중인 Movie들만 거르기
+            for (int key : movieDatabase.keySet()) {
+                Movie movie = movieDatabase.get(key);
+                if(movie.isRental()); {
+                    searchedList.add(movie);
+                }
+            }
+        }
+
+
+        return searchedList;
+    }
+
+    // 번호에 맞는 영화 객체를 단 하나만 리턴하는 메서드.
+    public Movie searchMovie(int movieNumber) {
+        return movieDatabase.get(movieNumber);
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
