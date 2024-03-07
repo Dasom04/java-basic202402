@@ -21,7 +21,6 @@ public class Utility {
             System.out.print(message);
             return sc.next();
         }
-
 }
 
 
