@@ -15,6 +15,7 @@ public class UserRepository {
 
     private static final Map<Integer, User> userDatabase = new HashMap<>();
 
+    /* 확인용 더미 데이터
     static {
         User test1 = new User("김테스트1", "010-1234-5678", Grade.BRONZE);
         User test2 = new User("김테스트2", "010-1234-5679", Grade.BRONZE);
@@ -27,6 +28,7 @@ public class UserRepository {
         test1.addOrder(testOrder);
 
     }
+    */
 
     // 회원 추가 기능
     public void addUser(User user) {
