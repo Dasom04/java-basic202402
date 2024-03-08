@@ -21,7 +21,7 @@ public class User {
     private int totalPaying; // 총 결제 금액
 
 
-    private Map<Integer, Order> oderList; // 각 회원마다 가지는 대여 목록
+    private Map<Integer, Order> orderList; // 각 회원마다 가지는 대여 목록
 
 
 
@@ -30,16 +30,16 @@ public class User {
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.grade = grade;
-        this.oderList = new HashMap<>();
+        this.orderList = new HashMap<>();
     }
 
     public Map<Integer, Order> getOderList() {
-        return oderList;
+        return orderList;
     }
 
     // 대여 목록 추가 기능
     public void addOrder(Order order) {
-        this.oderList.put(order.getMovie().getSerialNumber(), order);
+        this.orderList.put(order.getMovie().getSerialNumber(), order);
     }
 
     public static int getSequence() {
