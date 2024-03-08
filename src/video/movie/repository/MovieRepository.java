@@ -46,21 +46,18 @@ public class MovieRepository {
 
     public void addMovie(Movie movie) {
         movieDatabase.put(movie.getSerialNumber(), movie);
-
     }
 
     public List<Movie> searchMovieList(Condition condition, String keyword) throws Exception{
-
         if(condition == PUB_YEAR) {
-            return seachByPubYear(keyword);
+            return searchByPubYear(keyword);
         } else if (condition == NATION) {
             return searchByNation(keyword);
         } else if (condition == TITLE) {
-            return seachByTitle(keyword);
+            return searchByTitle(keyword);
         } else {
             return searchAll();
         }
-
     }
 
     private List<Movie> searchAll() {
@@ -74,7 +71,7 @@ public class MovieRepository {
     }
 
     // 문자열 숫자로 변환하는 과정에서 예외 발생 가능성이 있기 대문에 throws 추가.
-    private List<Movie> seachByPubYear(String keyword) throws NumberFormatException{
+    private List<Movie> searchByPubYear(String keyword) throws NumberFormatException{
         List<Movie> searchedList = new ArrayList<>();
 
         // 입력값을 String으로 받았기 때문에 int로 변환해서 비교.
@@ -87,7 +84,6 @@ public class MovieRepository {
             }
         }
         return searchedList;
-
     }
 
     private List<Movie> searchByNation(String keyword) {
@@ -102,7 +98,7 @@ public class MovieRepository {
         return searchedList;
     }
 
-    private List<Movie> seachByTitle(String keyword) {
+    private List<Movie> searchByTitle(String keyword) {
         List<Movie> searchedList = new ArrayList<>();
 
         for (int key : movieDatabase.keySet()) {
@@ -116,8 +112,6 @@ public class MovieRepository {
 
     public Movie deleteMovie(int delMovieNum) {
         return movieDatabase.remove(delMovieNum);
-
-
     }
 
     public List<Movie> searchByRental(boolean possible) {
@@ -138,17 +132,15 @@ public class MovieRepository {
                 }
             }
         }
-
-
         return searchedList;
     }
 
     // 번호에 맞는 영화 객체를 단 하나만 리턴하는 메서드.
     public Movie searchMovie(int movieNumber) {
         return movieDatabase.get(movieNumber);
-
-
     }
+
+
 }
 
 
