@@ -34,8 +34,7 @@ public class MovieService implements AppService {
                     deleteMovieData();
                     break;
                 case 4:
-
-                    break;
+                    return;
                 default:
                     System.out.println("### 메뉴를 다시 입력하세요.");
 
@@ -44,9 +43,9 @@ public class MovieService implements AppService {
     }
 
     private void insertMovieData() {
-        System.out.println("\n===== 영화 DVD 정보를 추가합니다. =====");
-        String movieName = inputString("# 영화명:");
-        String nation = inputString("#국가명: ");
+        System.out.println("\n ===== 영화 DVD 정보를 추가합니다. =====");
+        String movieName = inputString("# 영화명: ");
+        String nation = inputString("# 국가명: ");
         int pubYear = inputInteger("# 발매연도: ");
 
         Movie newMovie = new Movie(movieName, nation, pubYear);
@@ -54,7 +53,6 @@ public class MovieService implements AppService {
         movieRepository.addMovie(newMovie);
 
         System.out.printf("\n### [%s] 정보가 정상적으로 추가되었습니다.", movieName);
-
     }
 
     // 영화 검색 정보 출력
@@ -62,16 +60,15 @@ public class MovieService implements AppService {
 
         try {
             List<Movie> movies = searchMovieData();
-            int conut = movies.size();
-            if(conut > 0) {
-                System.out.printf("\n================================= 검색 결과(총 %d건) =================================\n", conut);
+            int count = movies.size();
+            if(count > 0) {
+                System.out.printf("\n================================= 검색 결과(총 %d건) =================================\n", count);
                 for (Movie movie : movies) {
                     System.out.println(movie);
                 }
             } else {
                 System.out.println("\n### 검색 결과가 없습니다.");
             }
-
         } catch (Exception e) {
             System.out.println("\n### 발행연도는 정수로만 입력하세요.");
         }
@@ -82,7 +79,6 @@ public class MovieService implements AppService {
         System.out.println("\n============== 영화 DVD 검색 조건을 선택하세요. ===============");
         System.out.println("[ 1. 제목검색 | 2. 국가검색 | 3. 발매연도검색 | 4. 전체검색 ]");
         int selection = inputInteger(">>> ");
-
 
         Condition condition = Condition.ALL;
 
@@ -111,9 +107,7 @@ public class MovieService implements AppService {
         if(condition != Condition.ALL) {
             keyword = inputString("# 검색어: ");
         }
-
         return movieRepository.searchMovieList(condition, keyword);
-
     }
 
     // 기존 등록 영화 삭제 기능
