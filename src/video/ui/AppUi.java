@@ -7,13 +7,13 @@ public class AppUi {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static String inputString(String messege) {
-        System.out.print(messege);
+    public static String inputString(String message) {
+        System.out.print(message);
         return sc.nextLine();
     }
 
-    public static int inputInteger(String messege) {
-        System.out.print(messege);
+    public static int inputInteger(String message) {
+        System.out.print(message);
         int num = 0;
         try {
             num = sc.nextInt();
