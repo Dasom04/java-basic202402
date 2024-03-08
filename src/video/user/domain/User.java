@@ -16,7 +16,7 @@ public class User {
 
     private int userNumber;
     private String userName;
-    private  String phoneNumber;
+    private String phoneNumber;
     private Grade grade;
     private int totalPaying; // 총 결제 금액
 
@@ -89,19 +89,18 @@ public class User {
 
     public void setTotalPaying(int totalPaying) {
         this.totalPaying += totalPaying;
+
+
+        // 회원이 대여를 진행할 때 이 setter가 호출됨.
+        // 총 결제금액에 따라 회원 등급을 조정.
+        if (this.totalPaying >= VIP_PRICE) {
+            this.grade = Grade.VIP;
+        } else if (this.totalPaying >= GOLD_PRICE) {
+            this.grade = Grade.GOLD;
+        } else if (this.totalPaying >= SILVER_PRICE) {
+            this.grade = Grade.SILVER;
+        }
     }
-
-    // 회원이 대여를 진행할 때 이 setter가 호출됨.
-    // 총 결제 금액에 따라 회원 등급을 조정.
-
-    if (this.totalPaying >= VIP_PRICE) {
-        this.grade = Grade.VIP;
-    } else if (this.totalPaying >= GOLD_PRICE) {
-        this.grade = Grade.GOLD;
-    } else if (this.totalPaying >= SILVER_PRICE) {
-        this.grade = Grade.SILVER;
-    }
-
 
     @Override
     public String toString() {
