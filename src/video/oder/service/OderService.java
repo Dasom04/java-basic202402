@@ -30,7 +30,7 @@ public class OderService implements AppService {
                     processOrderDvd();
                     break;
                 case 2:
-                    processReturnDVD();
+                    processReturnDvd();
                     break;
                 case 3:
                     return;  // 초기 메뉴로 돌아가서 return.
@@ -175,7 +175,7 @@ public class OderService implements AppService {
     }
 
     // DVD 반납 서비스 비지니스 로직
-    private void processReturnDVD() {
+    private void processReturnDvd() {
         System.out.println("\n===================================== 반납관리 시스템을 실행합니다. =====================================");
         System.out.println("### 반납자의 이름을 입력하세요.");
         String name = inputString(">>> ");
