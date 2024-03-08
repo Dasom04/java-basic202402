@@ -18,8 +18,8 @@ public class ChargePolicy {
     public static int calculateDvdCharge(Movie movie) {
         // 올해 연도 첨부
         int thisYear = LocalDate.now().getYear();
-        // 출시 후 경과 년도 계산
-        int movieAge = thisYear- movie.getPubYear();
+        // 출시 후 경과년도 계산
+        int movieAge = thisYear - movie.getPubYear();
         int charge = BASE_CHARGE - (movieAge * DISCOUNT);
 
         if(charge < LIMIT_CHARGE) {
