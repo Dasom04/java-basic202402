@@ -65,7 +65,7 @@ public class ArtistRepository {
 
     // 세이브 기능
     public void saveData() {
-        // 폴더 경로는 Utillty 클래스에 상수로 선언되어있음.
+        // 폴더 경로는 Utility 클래스에 상수로 선언되어있음.
         // 폴더가 실존하지 않는 경우 생성을 하고 세이브 파일을 생성해야 합니다.
         // 파일명은 song.sav로 진행합니다.
         File f = new File(Utility.FILE_PATH);
