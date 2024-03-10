@@ -60,7 +60,7 @@ public class ArtistView {
         String artistName = input("- 가수명: ");
 
         if(ar.isRegisted(artistName)) {
-            System.out.printf("\n# %s가수의 노래 목록\n", artistName);
+            System.out.printf("\n# %s 가수의 노래 목록\n", artistName);
             makeLine();
 
             ar.showSongList(artistName);
@@ -88,7 +88,7 @@ public class ArtistView {
             // 그렇다 -> 새로운 가수 정보를 생성하는 것이 아닌, 기존 가수 정보에서 노래만 추가.
             boolean flag = ar.addNewSong(artistName, songName);
             if (!flag) {
-                System.out.printf("\n# [%s]중복된 노래입니다.\n", songName);
+                System.out.printf("\n# [%s]곡은 이미 등록된 노래입니다.\n", songName);
             } else {
                 System.out.printf("\n# %s 가수의 노래목록에 %s 곡이 추가되었습니다.\n"
                         , artistName, songName);
