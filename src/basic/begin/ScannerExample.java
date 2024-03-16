@@ -7,7 +7,6 @@ public class ScannerExample {
 
     public static void main(String[] args) {
 
-        // 2. 스캐너 객체를 생성.
         Scanner sc = new Scanner(System.in);
 
         /*
@@ -26,12 +25,14 @@ public class ScannerExample {
         System.out.print("나이를 입력하세요: ");
         int age = sc.nextInt();
 
-        System.out.printf("제 이름은 %s이고, 나이는 %d세 입니다.\n", name, age);
+        System.out.printf("제 이름은 %s이고, 나이는 %d세 입니다.\n", name, age );
+
 
         // 4. 스캐너 객체를 반납
         // 객체를 반납 -> Scanner 객체를 메모리에서 해제
+
         sc.close();
 
-    }
 
+    }
 }
