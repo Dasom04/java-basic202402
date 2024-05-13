@@ -79,8 +79,8 @@ public class Main {
 
         // 연습 5: Milan에 거주하는 거래자가 한명이라도 있는지 여부 확인?
         boolean milan = transactions.stream()
-                .map(transaction -> transaction.getTrader().getCity())
-                .anyMatch(s -> s.equals("Milan"));
+                .anyMatch(transaction -> transaction.getTrader().getCity().equalsIgnoreCase("Milan"));
+
         System.out.println("milan = " + milan);
 
 
@@ -88,21 +88,55 @@ public class Main {
 
         // 연습 6: Cambridge에 사는 거래자의 모든 거래액의 총합 출력.
         // stream 함수 중 sum 하면 끝남 없이도 할 수 있음
-        List<String> cambridge = transactions.stream()
-                .map(transaction -> transaction.getTrader().getCity())
-                .filter(s -> s.equals("Cambridge"))
-                .Sum
+       /* List<Integer> list = transactions.stream()
+                .filter(transaction -> transaction.getTrader().getCity().equalsIgnoreCase("Cambridge"))
+                .map(Transaction::getValue)
                 .collect(toList());
 
+        int total = 0;
+        for (Integer i : list) {
+            total += i;
+        }
+        System.out.println("total: "+ total);
+        */
+
+        int totalValue = transactions.stream()
+                .filter(transaction -> transaction.getTrader().getCity().equalsIgnoreCase("Cambridge"))
+                .mapToInt(Transaction::getValue)
+                .sum(); // 반복문 안돌려도 이 함수로 합계 구할 수 있음
+        System.out.println("totalValue: " + totalValue);
 
 
+        makeLine();
 
         // 연습 7: 모든 거래에서 최고 거래액은 얼마인가?
+        /*
+        Transaction transaction = transactions.stream()
+                .max(comparing(trs -> trs.getValue()))
+                .get();
+
+        System.out.println("maxValue: " + transaction.getValue());
+         */
+        int maxValue = transactions.stream()
+                .mapToInt(Transaction::getValue)
+                .max()
+                .getAsInt();
+        System.out.println("maxValue = " + maxValue);
 
 
-
+        makeLine();
 
         // 연습 8. 가장 작은 거래액을 가진 거래정보 탐색
+        /*
+        transactions.stream()
+                .min(comparing(Transaction::getValue))
+                .ifPresent(System.out::println);
+         */
+        Transaction transaction = transactions.stream()
+                .min(comparing(tr -> tr.getValue()))
+                .get();
+        System.out.println("transaction = " + transaction);
+
 
     }
 }
